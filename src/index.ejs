@@ -3,7 +3,13 @@ title: Intromech
 layout: base.ejs
 ---
 
-<div class="landing-img">
-    <img src="<%=landing.image%>" alt="<%=landing.name%>">
+
+<img class="landing-img" src="<%=landing.image%>" alt="<%=landing.name%>">
+
+
+<div class="row text-center message">
+    <div class="col-md-12">
+        <h1><%=landing.message%></h1>
+        <a href="/blog" class="btn btn-primary">View Blog</a>
+    </div>
 </div>
-<div class="message"><%=landing.message%></div>
