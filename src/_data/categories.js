@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv').config();
 
-module.exports = axios.get((process.env.HOST+"/categories"),{
+module.exports = axios.get((`${process.env.HOST}/categories`),{
   headers: {
     Authorization: process.env.JWT
   },

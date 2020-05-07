@@ -8,7 +8,7 @@ require('dotenv').config();
 // Make a request for a user with a given ID
 // module.exports 
 
-module.exports = axios.get((process.env.HOST + "/articles"),{
+module.exports = axios.get((`${process.env.HOST}/articles`),{
   headers: {
     Authorization: process.env.JWT
   },

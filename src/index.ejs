@@ -1,23 +1,9 @@
 ---
-title: Index page
+title: Intromech
 layout: base.ejs
-pagination:
-    data: articles
-    size: 1
-    alias: article
 ---
 
-
-<h1>This is first page</h1>
-
-<% articles.forEach(article => { %>
-    <a href="/show/<%=article.slug%>" style="text-decoration: none;">
-        <h1><%=article.title%></h1>
-        <div><%=article.content%></div>
-    </a>
-<%})%>
-
-
-<a href="<%=pagination.previous%>">Previous</a><a href="<%=pagination.next%>">Next</a>
-
-
+<div class="landing-img">
+    <img src="<%=landing.image%>" alt="<%=landing.name%>">
+</div>
+<div class="message"><%=landing.message%></div>
