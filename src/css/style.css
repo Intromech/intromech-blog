@@ -3,6 +3,7 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    
 }
 
 
@@ -17,4 +18,31 @@ body {
 
 .message {
     margin-top: -50vh;
+}
+
+.page-name-container {
+    background: green;
+    width: 100vw;
+    height: 400px;
+    text-align: center;
+    margin-bottom: -100px;
+}
+
+.page-name {
+    position: relative;
+    top: 25%;
+}
+
+.page-name h1 {
+    font-size: 3.5rem;
+}
+
+.articles-container {
+    background: #f0f0f0;
+   
+    padding: 2rem 0.5rem;
+}
+
+.pagination-buttons a {
+    margin: 3px;
 }

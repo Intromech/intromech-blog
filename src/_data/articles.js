@@ -47,7 +47,8 @@ module.exports = axios.get((`${process.env.HOST}/articles`),{
         content: converter.makeHtml(data.content),
         img: process.env.HOST + data.image.url,
         slug: data.slug,
-        categories: data.categories
+        categories: data.categories,
+        imgName: data.image.name
       };
       articlesArray.unshift(artObj);
     });

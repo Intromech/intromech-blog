@@ -8,16 +8,37 @@ pagination:
 ---
 
 
-<h1>This is first page</h1>
-
-<% articles.forEach(article => { %>
-    <a href="/show/<%=article.slug%>" style="text-decoration: none;">
-        <h1><%=article.title%></h1>
-        <div><%-article.content%></div>
-    </a>
-<%})%>
+<div class="page-name-container">
+        <div class="page-name"><h1>Blogs</h1></div>
+</div>
 
 
-<a href="<%=pagination.previous%>">Previous</a><a href="<%=pagination.next%>">Next</a>
+<div class="container articles-container">    
+        <div class="row text-center">
+    <% articles.forEach(article => { %>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="<%=article.img%>" class="card-img-top" alt="<%=article.imgName%>" width="640" height="280">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=article.title%></h5>
+                      <a href="/show/<%=article.slug%>" class="btn btn-primary">Read</a>
+                    </div>
+                  </div>
+            </div>
+    <%})%>
+        </div>
+    
+    
+</div>
+
+
+
+<div class="container text-center pagination-buttons">
+    <a href="<%=pagination.previous%>" class="btn btn-secondary">Previous</a>
+    <a href="/blog/<%=pagination.pageNumber%>">Page <%=pagination.pageNumber%></a>
+    <a href="<%=pagination.next%>" class="btn btn-secondary">Next</a>
+</div>
+    
+
 
 
