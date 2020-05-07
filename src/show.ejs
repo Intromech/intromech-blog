@@ -1,5 +1,5 @@
 ---
-title: Show Page
+title: Show
 layout: base.ejs
 pagination:
     data: articles
@@ -8,9 +8,11 @@ pagination:
 permalink: /show/<%=article.slug%>/index.html
 ---
 
-<div>
-<img src="<%=article.img%>" alt="">
-</div>
 
-<h1><%=article.title%></h1>
-<main><%-article.content%></main>
+<div class="page-name-container"><img class="show-img" src="<%=article.img%>" alt="<%=article.imgName%>"></div>
+<div class="container articles-container">
+    <div class="page-name"><h1><%=article.title%></h1></div>
+        <main class="row">
+            <article class="show-article col-sm-12 col-md-12 col-lg-10"><%-article.content%></article>
+        </main>
+</div>
