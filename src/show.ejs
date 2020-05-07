@@ -1,0 +1,16 @@
+---
+title: Show Page
+layout: base.ejs
+pagination:
+    data: articles
+    size: 1
+    alias: article
+permalink: /show/<%=article.slug%>/index.html
+---
+
+<div>
+<img src="<%=article.img%>" alt="">
+</div>
+
+<h1><%=article.title%></h1>
+<main><%-article.content%></main>

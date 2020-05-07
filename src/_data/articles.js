@@ -44,10 +44,10 @@ module.exports = axios.get((process.env.HOST + "/articles"),{
         id: data.id,
         author: data.user.username,
         title: data.title,
-        content: data.content,
-        image: data.image.url,
+        content: converter.makeHtml(data.content),
+        img: process.env.HOST + data.image.url,
         slug: data.slug,
-        // categories: data.categories
+        categories: data.categories
       };
       articlesArray.unshift(artObj);
     });
