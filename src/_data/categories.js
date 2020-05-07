@@ -13,7 +13,12 @@ module.exports = axios.get((`${process.env.HOST}/categories`),{
         catArr.push(data.name);
     });
 
-    return catArr;
+    return {
+      data: response.data, 
+      arr: catArr
+    }
+
+    
 
     
   })

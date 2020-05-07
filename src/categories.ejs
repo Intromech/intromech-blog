@@ -2,10 +2,26 @@
 title: Categories
 layout: base.ejs
 pagination:
-    data: categories
+    data: categories.arr
     size: 1
     alias: category
 permalink: /categories/<%=pagination.items%>/index.html
 ---
 
-<h1>This is <%=pagination.items%> page</h1>
+<h1>This is <%=pagination.items%></h1>
+
+<% categories.data.forEach(category => { %>
+    <% if (category.name == pagination.items) { %>
+        <% category.articles.forEach(article => { %>
+
+
+
+
+            <h1><%=article.title%></h1>
+
+
+
+            
+        <% }) %>
+    <% } %>
+<% }) %>
