@@ -1,0 +1,27 @@
+{
+  "name": "intromech-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Intromech/intromech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Intromech/intromech-blog/issues"
+  },
+  "homepage": "https://github.com/Intromech/intromech-blog#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "showdown": "^1.9.1"
+  }
+}
