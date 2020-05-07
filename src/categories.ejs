@@ -9,42 +9,28 @@ permalink: /categories/<%=pagination.items%>/index.html
 ---
 
 
-<div class="page-name-container">
-    <div class="page-name"><h1><%=pagination.items%></h1></div>
-</div>
+<div class="page-name-container"></div>
 
-
-<h1>This is <%=pagination.items%></h1>
-
-<div class="container articles-container">    
-<div class="row text-center">
-
-<% categories.data.forEach(category => { %>
-    <% if (category.name == pagination.items) { %>
-        <% category.articles.forEach(article => { %>
-
-
-
-
-        <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img src="http://localhost:1337<%=article.image.url%>" class="card-img-top" alt="<%=article.image.name%>" width="640" height="280">
-                <div class="card-body">
-                    <h5 class="card-title"><%=article.title%></h5>
-                    <a href="/show/<%=article.slug%>" class="btn btn-primary">Read</a>
+<div class="container articles-container">
+    <div class="page-name"><h1><%=pagination.items%></h1></div> 
+    <div class="row text-center">
+        <% categories.data.forEach(category => { %>
+            <% if (category.name == pagination.items) { %>
+                <% category.articles.forEach(article => { %>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="http://localhost:1337<%=article.image.url%>" class="card-img-top" alt="<%=article.image.name%>" width="640" height="280">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=article.title%></h5>
+                        <a href="/show/<%=article.slug%>" class="btn btn-primary">Read</a>
+                    </div>
                 </div>
-                </div>
-        </div>
-
-
-
-            
+            </div>            
+                <% }) %>
+            <% } %>
         <% }) %>
-    <% } %>
-<% }) %>
-
+    </div>
 </div>
 
-
-</div>
+<script src="/js/app.js"></script>
 

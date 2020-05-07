@@ -21,20 +21,19 @@ body {
 }
 
 .page-name-container {
-    background: green;
+    background: url('/img/blog.jpg') center no-repeat;
     width: 100vw;
     height: 400px;
     text-align: center;
     margin-bottom: -100px;
 }
 
-.page-name {
-    position: relative;
-    top: 25%;
-}
 
 .page-name h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    
 }
 
 .articles-container {
@@ -46,3 +45,5 @@ body {
 .pagination-buttons a {
     margin: 3px;
 }
+
+

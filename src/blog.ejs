@@ -3,19 +3,17 @@ title: Index page
 layout: base.ejs
 pagination:
     data: articles
-    size: 1
+    size: 12
     alias: article
 ---
 
-
 <div class="page-name-container">
-        <div class="page-name"><h1>Blogs</h1></div>
+    
 </div>
-
-
-<div class="container articles-container">    
+<div class="container articles-container">
+    <div class="page-name"><h1>Blogs</h1></div>
         <div class="row text-center">
-    <% articles.forEach(article => { %>
+    <% article.forEach(article => { %>
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card">
                     <img src="<%=article.img%>" class="card-img-top" alt="<%=article.imgName%>" width="640" height="280">
@@ -27,8 +25,6 @@ pagination:
             </div>
     <%})%>
         </div>
-    
-    
 </div>
 
 

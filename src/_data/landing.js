@@ -17,3 +17,4 @@ module.exports = axios.get((`${process.env.HOST}/landings`))
 })
 
 
+// I am not using this file. I made a image folder and for landing.jpg. I am no longer taking the landing.jpg from cms
