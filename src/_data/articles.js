@@ -2,11 +2,6 @@ const axios = require('axios');
 const showdown = require('showdown');
 const converter = new showdown.Converter();
 require('dotenv').config();
-// var hostURL = 'https://intromech-cms.herokuapp.com/articles';
-
-
-// Make a request for a user with a given ID
-// module.exports 
 
 module.exports = axios.get((`${process.env.HOST}/articles`),{
   headers: {
@@ -42,10 +37,9 @@ module.exports = axios.get((`${process.env.HOST}/articles`),{
     response.data.forEach(data => {
       var artObj = {
         id: data.id,
-        author: data.user.username,
         title: data.title,
         content: converter.makeHtml(data.content),
-        img: process.env.HOST + data.image.url,
+        img: data.image.url,
         slug: data.slug,
         categories: data.categories,
         imgName: data.image.name

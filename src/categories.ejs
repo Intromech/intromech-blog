@@ -19,7 +19,7 @@ permalink: /categories/<%=pagination.items%>/index.html
                 <% category.articles.forEach(article => { %>
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card">
-                    <img src="http://localhost:1337<%=article.image.url%>" class="card-img-top" alt="<%=article.image.name%>" width="640" height="280">
+                    <img src="<%=article.image.url%>" class="card-img-top" alt="<%=article.image.name%>" width="640" height="280">
                     <div class="card-body">
                         <h5 class="card-title"><%=article.title%></h5>
                         <a href="/show/<%=article.slug%>" class="btn btn-primary">Read</a>

@@ -10,11 +10,23 @@ if (pageTitle == 'show'){
     const imgURL = document.querySelector('.show-img').getAttribute("src")
     pageImg.style.background = `url("${imgURL}") center no-repeat`
 } else {
-    pageImg.style.background = `url("/img/${pageName}.jpg") center no-repeat`
+    var getColor = getRandomColor();
+    pageImg.style.background = getColor;
 }
 
 articleImages.forEach(img => {
     img.parentElement.classList.add("text-center");
 })
+
+
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 
